@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浮动案例</title>
+
+    <style>
+        /* 本项目中没有设置盒子的宽度和高度，都是通过padding来撑开盒子大小，
+            盒子与盒子之间的距离使用margin来设置 */
+        /* 公共样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            /* 将所有的盒子转为IE盒子模型，padding和border不会改变盒子的width和height */
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+        /* 头部 */
+        header {
+            background-color: #777;
+        }
+        header li {
+            display: inline-block;
+            /* float: left; */
+            padding: 20px 15px;
+            margin-left: -5px;
+
+        }
+        a {
+            font-size: 14px;
+            font-family: "Microsoft yahei";
+            text-decoration: none; 
+        }
+        header li:hover {
+            background-color: #4caf50;
+        }
+        header li:first-of-type {
+            background-color: #4caf50;
+            padding-left: 20px;
+        }
+        header li a {
+            color: white;
+        }
+        header li:hover a {
+            color: red;
+            text-decoration: underline;
+        }
+        header::after {
+            content: "";
+            clear: both;
+        }
+        aside {
+            width: 40%;
+            height: 200px;
+            /* background-color: lightblue; */
+            float: left;
+        }
+        aside li {
+            background-color: #eee;
+            margin-bottom: 4px;
+            padding: 10px;
+        }
+        aside li a {
+            color: #444;
+        }
+        aside ul {
+            padding: 16px;
+        }
+        /* 内容区 */
+        section {
+            width: 60%;
+            height: 200px;
+            /* background-color: lightgreen; */
+            float: left;
+            padding: 15px 18px;
+        }
+        section h1 {
+            background-color: #2196f3;
+            color: white;
+            padding: 40px 0;
+            text-align: center; 
+            font-size: 50px;
+        }
+        section h2 {
+            margin: 28px 0;
+        }
+        section p {
+            margin: 22px 0;
+            font-size: 16px;
+            line-height: 24px;
+            text-indent: 2em;
+        }
+        .clear {
+            clear: both;
+        }
+        /* 底部区域 */
+        footer {
+            /* height: 200px; */
+            background-color: #666;
+            color: white;
+            clear: both;
+            padding: 32px 16px;
+            margin-top: 300px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 顶部 -->
+    <header>
+        <ul>
+            <li class="index"><a href="#">主页</a></li>
+            <li><a href="#">新闻</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">关于我们</a></li>
+            
+        </ul>
+    </header>
+    <!-- 左边 -->
+    <aside>
+        <ul>
+            <li><a href="#">HTML&CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">数据结构</a></li>
+            <li><a href="#">Bootsrap&Jquery</a></li>
+            <li><a href="#">微信小程序</a></li>
+            <li><a href="#">NodeJS</a></li>
+            <li><a href="#">React&Vue</a></li>
+        </ul>
+    </aside>
+    <!-- 右边 -->
+    <section>
+        <h1>这是标题</h1>
+        <h2>HTML5</h2>
+        <P>HTML5 是下一代 HTML 标准。</P>
+        <P>HTML , HTML 4.01的上一个版本诞生于 1999 年。自从那以后，Web 世界已经经历了巨变。HTML5 仍处于完善之中。然而，大部分现代浏览器已经具备了某些 HTML5 支持。</P>
+    </section>
+    <div class="clear"></div>
+    <!-- 底部的区域 -->
+    <footer>文本</footer>
+</body>
+</html>
